@@ -10,7 +10,10 @@ public class App {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:application-config.xml");
         OrderService orderService = context.getBean(OrderService.class);
 
-        Vehicle obj = (Vehicle)context.getBean("vehicle");
+        Vehicle obj = (Vehicle)context.getBean("car");
         obj.drive();
+
+        Vehicle obj1 = (Vehicle)context.getBean("bike");
+        obj1.drive();
     }
 }
